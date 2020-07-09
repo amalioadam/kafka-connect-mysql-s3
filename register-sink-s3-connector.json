@@ -1,0 +1,19 @@
+{
+  "name":"s3-sink-connector",
+  "config":{
+    "connector.class": "io.confluent.connect.s3.S3SinkConnector",
+    "s3.region": "eu-east-1",
+    "s3.proxy.user": "AWS_ACCESS_KEY_ID",
+    "flush.size": "1000",
+    "topics": "dbserver1_inventory_cars",
+    "tasks.max": "1",
+    "format.class": "io.confluent.connect.s3.format.json.JsonFormat",
+    "s3.proxy.password": "AWS_SECRET_ACCESS_KEY",
+    "storage.class": "io.confluent.connect.s3.storage.S3Storage",
+    "s3.bucket.name": "test-bucket",
+    "rotate.schedule.interval.ms": "5000",
+    "locale": "PL",
+    "timezone": "UTC",
+    "s3.proxy.url":"http://aws-s3:5000"
+  }
+}
